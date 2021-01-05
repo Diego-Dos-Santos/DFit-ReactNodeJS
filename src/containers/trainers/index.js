@@ -1,38 +1,53 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link }from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import OpenModal from '../../components/Modal/index'
+
+import "./styles.css";
 
 export class Trainers extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            trainers: [
-                {name: 'Diego', assessment: 4.5, freeplaces: 1},
-                {name: 'Bruno', assessment: 3.2, freeplaces: 4},
-                {name: 'Jon', assessment: 1.2, freeplaces: 3},
-                {name: 'Andre', assessment: 3.4, freeplaces: 2}
-              ]
-        }
+   constructor() {
+       super()
+   
+       this.state = {trainers:[]}
+
+   }
+
+   componentDidMount(){
+        fetch("http://localhost:8080/load").then(res =>
+            res.json().then(data => {
+              console.log("trainers", JSON.stringify(data, null, 4));
+              
+              this.setState({ trainers: data.trainers })
+
+              console.log(this.state.trainers)
+
+            })
+        );
     }
     
-    render() {
-        const trainers = this.state.trainers
+    render(){
+
+        const trainers = this.state.trainers;
 
         return (
             <div className="trainersContainer">
-                {trainers.map((trainer) => (
+                {trainers.map(trainer => (
                     <div className="trainersBlock" key={trainer._id}>
-                        <div className="trainersBlock__name">Nombre <span>{trainer.name}</span></div>
-                        <div className="trainersBlock__assessment">Valoración <span>{trainer.assessment}</span></div>
-                        <div className="trainersBlock__freeplaces">Maximo número de clientes <span>{trainer.freeplaces}</span></div>
-                    </div>
+                        <h2 className="trainersBlock__title">{trainer.title}</h2>
+                        <div className="trainersBlock__info">
+                            <div className="trainersBlock__name">Nombre <span><input placeholder={trainer.name}></input></span></div>
+                            <div className="trainersBlock__assessment">Valoración <span><input placeholder={trainer.rep}></input></span></div>
+                            <div className="trainersBlock__freeplaces">Maximo número de clientes <span><input placeholder={trainer.disp}></input></span></div>
+                        </div>
+                  </div>
                 ))}
 
-            <div class="container-trainers__buttons">
-                <button type='button' class='btn tablasClients' data-toggle="modal" data-target="#clientsModal">Ver Tabla de clientes</button>
-                <Link to="/resultados"><Button className="verResultados" variant="primary">Resultados</Button>{' '}</Link>  
+                <div class="container-trainers__buttons">
+                    <OpenModal />
+                    <Link to="/resultados"><Button className="verResultados" variant="primary">Calcular resultados</Button>{' '}</Link> 
+                </div>
             </div>
-            </div>
-        )
+        )   
     }
 }

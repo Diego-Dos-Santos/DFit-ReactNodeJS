@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
-import "./styles.scss";
+import "./styles.css";
 import { TimelineLite } from "gsap/all";
 
 export default class Main extends Component {

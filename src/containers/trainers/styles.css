@@ -1,0 +1,166 @@
+.trainersContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.trainersBlock__title {
+    font-weight: bold;
+    color: #1b1b1b;
+    text-align: left;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.trainersBlock {
+    padding: 15px;
+    margin: 0 auto;
+    border-bottom:1px solid #808080;
+}
+
+.trainersBlock__name {
+    display: flex;
+    align-items: center;
+}
+
+.trainersBlock__assessment {
+    display: flex;
+    align-items: center;
+}
+
+.trainersBlock__freeplaces {
+    display: flex;
+    align-items: center;
+}
+.trainersBlock__name span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #337ab7;
+    margin-right: 50px;
+    margin-left: 5px;
+}
+
+.trainersBlock__assessment span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #337ab7;
+    margin-right: 50px;
+    margin-left: 5px;
+}
+
+.trainersBlock__freeplaces span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #337ab7;
+    margin-right: 50px;
+    margin-left: 5px;
+}
+
+.trainersBlock__info {
+    display: flex;
+    flex-direction: row;
+}
+
+.trainersBlock__info input {
+    width: 80px;
+    height: 25px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.trainersBlock__name input{
+    padding: 5px;
+}
+
+.trainersBlock__assessment input {
+    width: 45px;
+    padding: 5px;
+}
+
+.trainersBlock__freeplaces input {
+    width: 45px;
+    padding: 5px;
+}
+
+.container-trainers__buttons {
+    width: 560px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-trainers__buttons button {
+    font-size: 14px;
+}
+
+.configButtons {
+    width: 610px;
+}
+
+.configSpan {
+    margin-right: 15px;
+}
+
+.tablasClients {
+    margin-right: 15px;
+}
+
+.modal{ display:block; }
+
+@media screen and (max-width: 600px) {
+    .trainersContainer {
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trainersBlock {
+        padding: 15px;
+        margin: 0 auto;
+        border-bottom:1px solid #808080;
+    }
+
+    .trainersBlock__name span {
+        margin: 0;
+    }
+
+    .trainersBlock__assessment span {
+        margin: 0;
+    }
+
+    .trainersBlock__freeplaces span {
+        margin: 0;
+    }
+
+    .trainersBlock__name {
+        justify-content: space-between;
+    }
+
+    .trainersBlock__assessment {
+        justify-content: space-between;
+    }
+
+    .trainersBlock__freeplaces {
+        font-size: small;
+        justify-content: space-between;
+    }
+
+    .trainersBlock__info {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+    }
+
+    .trainersBlock__title {
+        text-align: center;
+    }
+
+    .container-trainers__buttons {
+        width: initial;
+        justify-content: center;
+        display: flex;
+        margin: 30px;
+    }
+}
