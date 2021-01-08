@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
-import Navbar from "react-bootstrap/Navbar";
-import logo from "../../logo-dudyfit-3.0.png";
+
 import "./styles.css";
+
+import { Container, Navbar, NavLink } from "react-bootstrap";
+import logo from "../../logo-dudyfit-3.0.png";
 import { TimelineLite } from "gsap/all";
 
 export default class Main extends Component {
@@ -32,7 +33,7 @@ export default class Main extends Component {
       >
         <Container>
           <Navbar.Brand href="#" className="logo">
-            <img src={logo} alt="Logo" />
+            <NavLink href="/"><img src={logo} alt="Logo" /></NavLink>
           </Navbar.Brand>
         </Container>
       </Navbar>

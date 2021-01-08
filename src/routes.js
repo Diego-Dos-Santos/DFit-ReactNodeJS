@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Trainers } from "./containers/trainers";
 import { Review } from "./containers/review";
-import Results from "./containers/results";
+import { Results } from "./containers/results";
 
 const Routes = () => (
   <BrowserRouter>
