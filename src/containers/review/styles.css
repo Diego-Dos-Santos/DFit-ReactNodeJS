@@ -1,0 +1,54 @@
+/* DESKTOP */
+
+.valoracionBlock__satisfacion {
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 50px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+}
+
+.valoracionBlock__satisfacion h2 {
+  margin-bottom: 30px;
+}
+
+.valoracionBlock__satisfacion span {
+  font-size: 16px;
+}
+
+.valoracionBlock__calc {
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 32px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+}
+
+.valoracionBlock__calc h2 {
+  margin-bottom: 30px;
+}
+
+.valoracionBlock__calc span {
+  font-size: 16px;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 700px) {
+  .valoracionBlock {
+    display: flex;
+    flex-flow: column;
+    margin: 15px;
+  }
+
+  .valoracionBlock__satisfacion {
+    width: 100%;
+  }
+
+  .valoracionBlock__calc {
+    margin-top: 0;
+    width: 100%;
+  }
+}

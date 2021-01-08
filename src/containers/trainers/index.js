@@ -12,7 +12,7 @@ export class Trainers extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/load").then((res) =>
+    fetch("https://dfit-back.herokuapp.com/load").then((res) =>
       res.json().then((data) => {
         console.log("trainers", JSON.stringify(data, null, 4));
 
@@ -32,7 +32,7 @@ export class Trainers extends Component {
   };
 
   calculateResults(trainer) {
-    fetch("http://localhost:8080/calculate", {
+    fetch("https://dfit-back.herokuapp.com/calculate", {
       method: "POST",
       body: JSON.stringify(trainer),
       headers: {

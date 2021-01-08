@@ -23,17 +23,15 @@ export class Results extends Component {
   render() {
     const results = this.state.results;
 
-    console.log(results);
-
     return (
       <div className="mainBlock">
         <Tabs />
         <div className="resultsContainer">
           {results.map((result) => (
-            <div className="resultsBlock" key={result._id}>
+            <div className="resultsBlock h-100" key={result._id}>
               <div className="resultsBlock__header">
                 <div className="resultsBlock__title">{result.title}</div>
-                <Info />
+                <Info trainer={result}/>
               </div>
               <div className="resultsBlock__clients">
                 <div className="resultsBlock__image">
@@ -43,7 +41,9 @@ export class Results extends Component {
                   <div className="resultsBlock__name">{result.name}</div>
                   <div className="resultsBlock__list">
                     <p>Clientes asignados:</p>
-                    <p>- Cliente {result.client[0][0]}</p>
+                    {result.client.map((client) => (
+                        <div>- Cliente {client[0]}</div>
+                    ))}
                   </div>
                 </div>
               </div>
