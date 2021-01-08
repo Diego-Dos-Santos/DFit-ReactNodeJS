@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Container } from 'react-bootstrap';
-import Navbar from 'react-bootstrap/Navbar';
+import { Container } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
+import logo from "../../logo-dudyfit-3.0.png";
 import "./styles.css";
 import { TimelineLite } from "gsap/all";
 
@@ -22,12 +23,19 @@ export default class Main extends Component {
   }
   render() {
     return (
-      
-        <Navbar sticky="top" expand="lg" variant="light" bg="light" ref={(div) => (this.myElements = div)}>
-          <Container>
-            <Navbar.Brand href="#" className="logo">DFit</Navbar.Brand>
-          </Container>
-        </Navbar>
+      <Navbar
+        sticky="top"
+        expand="lg"
+        variant="light"
+        bg="light"
+        ref={(div) => (this.myElements = div)}
+      >
+        <Container>
+          <Navbar.Brand href="#" className="logo">
+            <img src={logo} alt="Logo" />
+          </Navbar.Brand>
+        </Container>
+      </Navbar>
     );
   }
 }

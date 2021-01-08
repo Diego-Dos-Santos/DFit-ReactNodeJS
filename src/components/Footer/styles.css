@@ -9,8 +9,12 @@
   margin: 30px;
 }
 
+#main-footer a {
+  color: #0ec9ff;
+}
+
 @media screen and (max-width: 600px) {
-  #main-footer { 
+  #main-footer {
     text-align: center;
   }
 }
