@@ -67,3 +67,11 @@
 .nav-link:hover {
   color: #0ec9ff;
 }
+
+/* MOBILE */
+
+@media screen and (max-width: 700px) { 
+  .resultsBlock {
+    margin-bottom: 20px;
+  }
+}
